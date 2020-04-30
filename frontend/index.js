@@ -56,7 +56,11 @@ const config = {
 
 const game = new Phaser.Game(config);
 
-const socket = io("http://localhost:3000");
+const socket = io(
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3000"
+    : "phaser-sockets-5nzng2eif.now.sh:3000"
+);
 
 let otherPlayers = [];
 let player;

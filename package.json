@@ -6,12 +6,15 @@
   "scripts": {
     "start": "run-p dev:*",
     "dev:frontend": "parcel frontend/index.html",
-    "dev:backend": "node backend/index.js"
+    "dev:backend": "node backend/index.js",
+    "build": "run-p build:*",
+    "build:frontend": "parcel build frontend/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "phaser": "^3.23.0",
     "socket.io": "^2.3.0",
