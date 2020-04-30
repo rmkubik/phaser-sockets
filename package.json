@@ -9,7 +9,7 @@
     "dev:backend": "node backend/index.js",
     "build": "run-p build:*",
     "build:frontend": "parcel build frontend/index.html",
-    "deploy": "git push hreoku master"
+    "deploy": "git push heroku master"
   },
   "keywords": [],
   "author": "",
