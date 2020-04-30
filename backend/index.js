@@ -13,8 +13,9 @@ io.on("connection", function (socket) {
     console.log("user disconnected");
   });
 
-  socket.on("chat message", function (msg) {
-    io.emit("chat message", msg);
+  socket.on("player:move", function (msg) {
+    console.log(msg);
+    io.emit("player:move", msg);
   });
 });
 
