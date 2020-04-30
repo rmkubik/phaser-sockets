@@ -25,6 +25,6 @@ io.on("connection", function (socket) {
   });
 });
 
-http.listen(3000, function () {
-  console.log("listening on *:3000");
+http.listen(process.argv[2] || 3000, function () {
+  console.log(`listening on *:${process.argv[2] || 3000}`);
 });

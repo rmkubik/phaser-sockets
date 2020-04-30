@@ -8,7 +8,8 @@
     "dev:frontend": "parcel frontend/index.html",
     "dev:backend": "node backend/index.js",
     "build": "run-p build:*",
-    "build:frontend": "parcel build frontend/index.html"
+    "build:frontend": "parcel build frontend/index.html",
+    "deploy": "git push hreoku master"
   },
   "keywords": [],
   "author": "",
