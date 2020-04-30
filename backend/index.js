@@ -1,11 +1,15 @@
 require("dotenv").config();
 
-var app = require("express")();
+const express = require("express");
+const app = express();
 var http = require("http").createServer(app);
 var io = require("socket.io")(http);
+var path = require("path");
+
+app.use(express.static("dist"));
 
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "../dist/index.html");
+  res.sendFile(path.join(__dirname, "../dist/index.html"));
 });
 
 io.on("connection", function (socket) {
