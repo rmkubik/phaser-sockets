@@ -8,7 +8,8 @@
     "dev:frontend": "parcel frontend/index.html",
     "dev:backend": "node backend/index.js",
     "build": "run-p build:*",
-    "build:frontend": "parcel build frontend/index.html"
+    "build:frontend": "parcel build frontend/index.html",
+    "build:backend": "node backend/index.js"
   },
   "keywords": [],
   "author": "",
